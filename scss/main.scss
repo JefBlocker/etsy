@@ -1,0 +1,38 @@
+// Color Palette
+$whiteColor: #FFFFFF;
+$grayDarkColor: #4A4B4F;
+$grayLightColor: #8D8D8D;
+
+// Font
+$font-family: sans-serif;
+  color: $grayLightColor;
+
+body {
+  background-color: $whiteColor;
+  $color: $grayLightColor;
+}
+
+.container {
+
+}
+
+header {
+  font-size: xx
+}
+
+.banner {
+
+}
+
+ul {
+
+}
+
+li {
+
+}
+
+footer {
+  background-color: $grayDarkColor;
+  color: $grayLightColor;
+}
