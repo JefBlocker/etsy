@@ -4,12 +4,13 @@ $grayDarkColor: #4A4B4F;
 $grayLightColor: #8D8D8D;
 
 // Font
-$font-family: sans-serif;
-  color: $grayLightColor;
+//$font-family: sans-serif;
+
 
 body {
   background-color: $whiteColor;
-  $color: $grayLightColor;
+  color: $grayLightColor;
+  font-family: sans-serif
 }
 
 .container {
@@ -17,22 +18,70 @@ body {
 }
 
 header {
-  font-size: xx
+  font-size: xx-large;
 }
 
 .banner {
-
+  background-image: url(images/banner.jpg);
+  background-size: cover;
+  //text-align: center;
+  //vertical-align: middle;
+  //padding-top: 130px;
+  //padding-bottom: 175px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+  // <img src="images/banner.jpg" alt="bridge" width=100%>
 }
 
 ul {
-
+  list-style-type: none;
+  text-align: center;
 }
 
 li {
+  max-width: 100%;
+  height: 160px;
+  width: auto;
+  text-align: center;
+  padding-top: -100px;
+  line-height: 70px;
+}
 
+//h1 {
+ // font-family: Georgia, serif;
+//}
+
+1 {
+    overflow: hidden;
+    text-align: center;
+}
+h1:before,
+h1:after {
+    background-color: #8D8D8D;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 40%;
+}
+h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+h1:after {
+    left: 0.5em;
+    margin-right: -50%;
 }
 
 footer {
+  position: absolute;
+  width: 100%;
+  height: 50px;
   background-color: $grayDarkColor;
   color: $grayLightColor;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 110px;
 }
