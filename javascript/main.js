@@ -68,7 +68,7 @@
   //console.log(range);
 
 // Make it a string
- //var str =  items.title + ' &pound;'items.price;
+ //var str =  items.title + ' &#163'items.price;
  //console.log(str);
  //&pound;
 
@@ -85,22 +85,20 @@
 
 // Use forEach function to evaluate items based upon "materials" that mention "wood"
 
-var range = items.filter(function(item) {
- return item.materials 
-})
-
-var myList = range.
+//var range = items.forEach(function(item) {
+// return (item.materials === "wood");
+//})
 
 // Make it a string
-var str = ? + ' is made of wood.'
- console.log(str);
+//var str = range + ' is made of wood.'
+// console.log(str);
 
     // Find our answer element
-  var answer5 = document.querySelector('#answer5');
+//  var answer5 = document.querySelector('#answer5');
     // Create a node from our above answer ready for the DOM
-  var textNode = document.createTextNode(str);
+//  var textNode = document.createTextNode(str);
     // Append newly created node to our answer element
-  answer5.appendChild(textNode);
+ // answer5.appendChild(textNode);
 
 ///// 5.Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
 
@@ -145,28 +143,11 @@ var str = ? + ' is made of wood.'
 var iMade = items.filter(function(x) {
   return (x.who_made === "i_did");
 });
-console.log(iMade);
+console.log(iMade.length);
 
-// Reduce the array of objects into a sum total
-
-  
-
-// var sum = iMade.reduce(function(prev, curr, index) {
-//  console.log(prev, curr, index);
-//  return prev + curr;
-// });
-// console.log(sum);
-
-  // Convert it to 2 decimal places
-  //var converted = toExponential(total);
-  //console.log(converted);
-
- // Make it a string
-  var str = iMade.length + ' were made by their sellers.';
-  console.log(str);
-
-
-
+// Make it a string
+var str = iMade.length + ' were made by their sellers.';
+console.log(str);
 
   // Make it show up on the page
 
