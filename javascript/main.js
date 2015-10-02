@@ -62,15 +62,27 @@
 
 
 // Filter item with GBP currency_code.
- //var range = items.filter(function(item) {
- //  return item.currency_code === "GBP";
-  //});
-  //console.log(range);
+ var range = items.filter(function(item) {
+   return item.currency_code === "GBP";
+  });
+  console.log(range);
 
+  var title = range.map(function(a) {return a.title;});
+    console.log(title);
+
+  var price = range.map(function(b) {return b.price;});
+    console.log(price);
 // Make it a string
- //var str =  items.title + ' &#163'items.price;
- //console.log(str);
+ var str = title + ' \xA3' + price;
+ console.log(str);
  //&pound;
+
+     // Find our answer element
+  var answer3 = document.querySelector('#answer3');
+    // Create a node from our above answer ready for the DOM
+  var textNode = document.createTextNode(str);
+    // Append newly created node to our answer element
+  answer3.appendChild(textNode);
 
 ///// 4. Display a list of all items who are made of wood.
 ///// SALE Mid Century Siesta Ware White Mug with Anchor - Set of 3 is made of wood.
@@ -140,23 +152,23 @@
 // Determine number of items with "who_made": "i did"
 
 
-var iMade = items.filter(function(x) {
-  return (x.who_made === "i_did");
-});
-console.log(iMade.length);
+//var iMade = items.filter(function(x) {
+//  return (x.who_made === "i_did");
+//});
+//console.log(iMade.length);
 
 // Make it a string
-var str = iMade.length + ' were made by their sellers.';
-console.log(str);
+//var str = iMade.length + ' were made by their sellers.';
+//console.log(str);
 
   // Make it show up on the page
 
     // Find our answer element
-  var answer6 = document.querySelector('#answer6');
+  //var answer6 = document.querySelector('#answer6');
     // Create a node from our above answer ready for the DOM
-  var textNode = document.createTextNode(str);
+  //var textNode = document.createTextNode(str);
     // Append newly created node to our answer element
-  answer6.appendChild(textNode);
+  //answer6.appendChild(textNode);
 
 }());
 
