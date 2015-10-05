@@ -3,58 +3,59 @@
   //Show me how to calculate the average price of all items.
 
   //// Create an array of just the prices
-  //var prices = items.map( function (item) {
-  //  return item.price;
-  //});
-  //console.log(prices);
+  var prices = items.map( function (item) {
+    return item.price;
+  });
+  console.log(prices);
 
   // Add all of the prices together
-  //var sum = prices.reduce( function (prev, next) {
-  //  return prev + next;
-  //});
-  //console.log(sum);
+  var sum = prices.reduce( function (prev, next) {
+    return prev + next;
+  });
+  console.log(sum);
 
   // Divide by total number of items
-  //var avg = sum / prices.length;
-  //console.log(avg);
+  var avg = sum / prices.length;
+  console.log(avg);
 
   // Convert it to 2 decimal places
-  //var converted = avg.toFixed(2);
-  //console.log(converted);
+  var converted = avg.toFixed(2);
+  console.log(converted);
 
   // Make it a string
-  //var str = 'The average price is $' + converted;
-  //console.log(str);
+  var str = 'The average price is $' + converted;
+  console.log(str);
 
 
   // Make it show up on the page
 
     // Find our answer element
-  //var answer1 = document.querySelector('#answer1');
+  var answer1 = document.querySelector('#answer1');
     // Create a node from our above answer ready for the DOM
-  //var textNode = document.createTextNode(str);
+  var textNode = document.createTextNode(str);
     // Append newly created node to our answer element
-  //answer1.appendChild(textNode);
+  answer1.appendChild(textNode);
 
 //// 2. Show me how to get an array of items that cost between $14.00 and $18.00 USD
 
 
 // Filter items with price betwen 14.00 and 18.00
-//var range = items.filter(function(title) {
- // return title.price > 14.00 && title.price < 18.00;
- //});
- // console.log(range);
+var range = items.filter(function(item) {
+  return item.price > 14.00 && item.price < 18.00;
+  return item.title;
+ });
+  console.log(range);
 
    // Make it a string
-  //var str = range;
-  //console.log(str);
+  var str = range;
+  console.log(str);
 
     // Find our answer element
-  //var answer2 = document.querySelector('#answer2');
+  var answer2 = document.querySelector('#answer2');
     // Create a node from our above answer ready for the DOM
-  //var textNode = document.createTextNode(str);
+  var textNode = document.createTextNode(str);
     // Append newly created node to our answer element
-  //answer2.appendChild(textNode);
+  answer2.appendChild(textNode);
 
 
 ///// 3. Which item has a "GBP" currency code? Display it's name and price.
@@ -73,16 +74,16 @@
   var price = range.map(function(b) {return b.price;});
     console.log(price);
 // Make it a string
- var str = title + ' \xA3' + price;
- console.log(str);
+  var str = title + ' \xA3' + price;
+  console.log(str);
  //&pound;
 
      // Find our answer element
-  var answer3 = document.querySelector('#answer3');
+   var answer3 = document.querySelector('#answer3');
     // Create a node from our above answer ready for the DOM
-  var textNode = document.createTextNode(str);
+   var textNode = document.createTextNode(str);
     // Append newly created node to our answer element
-  answer3.appendChild(textNode);
+   answer3.appendChild(textNode);
 
 ///// 4. Display a list of all items who are made of wood.
 ///// SALE Mid Century Siesta Ware White Mug with Anchor - Set of 3 is made of wood.
@@ -97,20 +98,33 @@
 
 // Use forEach function to evaluate items based upon "materials" that mention "wood"
 
-//var range = items.forEach(function(item) {
-// return (item.materials === "wood");
-//})
+//var madeOf = items.indexOf(function(item) {
+ // item.materials.indexOf("wood") is not -1
+//});
+//console.log(madeOf);
+
+// Determine which items have value of "wood" in the "materials" object array
+//var x = items.filter(function(item) {
+//   if (item.materials === "wood") 
+//   return title;
+//   }); 
+//   console.log(x);
+
+//I need to pull the titles for the the items that have the value of "wood" in the "materials" object array   
+//var y = materials.indexOf("wood") is not -1 {
+//  return title;
+//};
 
 // Make it a string
-//var str = range + ' is made of wood.'
+// var str = y + ' is made of wood.'
 // console.log(str);
 
     // Find our answer element
-//  var answer5 = document.querySelector('#answer5');
+//  var answer4 = document.querySelector('#answer4');
     // Create a node from our above answer ready for the DOM
 //  var textNode = document.createTextNode(str);
     // Append newly created node to our answer element
- // answer5.appendChild(textNode);
+//  answer4.appendChild(textNode);
 
 ///// 5.Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
 
@@ -141,7 +155,46 @@
 // the three broomsticks glass
 // personalized harry potter glass
 
+//var range = items.filter(function(item) {
+//  return item.materials.length >= 8;
+//});
+//console.log(range);
 
+//range.forEach(function(item) {
+//  item.quantity;
+//  item.title;
+
+//var div = document.createElement('div');
+//div.textContent = item.title;
+//var body = document.querySelector('body');
+//body.appendChild(div);
+//});
+
+// Filter items with price betwen 14.00 and 18.00
+//var description = range.map(function(item) {
+ // return item.title;
+ // });
+ // console.log(description);
+
+//var quantity = eightPlus.quantity;
+//console.log(quantity);
+
+//var title = eightPlus.title;
+//console.log(title);
+
+//var str = range;
+//console.log(str);
+
+// Make it a string
+//var str = 'Qty of ' + eightPlus.quantity + eightPlus.title + ' has' + eightPlus.materials + ' materials.';
+//console.log(str);
+
+    // Find our answer element
+  //var answer5 = document.querySelector('#answer5');
+    // Create a node from our above answer ready for the DOM
+  //var textNode = document.createTextNode(str);
+    // Append newly created node to our answer element
+  //answer5.appendChild(textNode);
 
 
 ///// 6. How many items were made by their sellers?
@@ -152,23 +205,23 @@
 // Determine number of items with "who_made": "i did"
 
 
-//var iMade = items.filter(function(x) {
-//  return (x.who_made === "i_did");
-//});
-//console.log(iMade.length);
+var iMade = items.filter(function(x) {
+  return (x.who_made === "i_did");
+});
+console.log(iMade.length);
 
 // Make it a string
-//var str = iMade.length + ' were made by their sellers.';
-//console.log(str);
+var str = iMade.length + ' were made by their sellers.';
+console.log(str);
 
   // Make it show up on the page
 
     // Find our answer element
-  //var answer6 = document.querySelector('#answer6');
+  var answer6 = document.querySelector('#answer6');
     // Create a node from our above answer ready for the DOM
-  //var textNode = document.createTextNode(str);
+  var textNode = document.createTextNode(str);
     // Append newly created node to our answer element
-  //answer6.appendChild(textNode);
+  answer6.appendChild(textNode);
 
 }());
 
