@@ -155,6 +155,33 @@ var range = items.filter(function(item) {
 // the three broomsticks glass
 // personalized harry potter glass
 
+// Filter items and return items consisting of eight or more materials
+var eightMoreMat = items.filter( function(item) {
+  return item.materials.length >= 8;
+});
+
+console.log(eightMoreMat);
+
+// Query document and find element with id #answer5
+var answer5 = document.querySelector('#answer5');
+
+// Iterate through items made of eight or more materials
+eightMoreMat.forEach( function(item) {
+  
+  // create p element in #answer5 and add text with title, # of materials, and list of materials.
+  var para = document.createElement('p');
+  para.textContent = item.title + 'has ' + item.materials.length + ' materials';
+  answer5.appendChild(para);
+
+  console.log(item.materials.length);
+
+item.materials.forEach( function (itemMaterial) {
+  var textNode = document.createTextNode(itemMaterial);
+
+});
+
+});
+
 //var range = items.filter(function(item) {
 //  return item.materials.length >= 8;
 //});
