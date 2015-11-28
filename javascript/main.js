@@ -138,39 +138,35 @@ var titleOfWood = madeOfWood.map( function (item) {
 
 //5  Display the name, number of items and the items it is made of.
 
-var materialsList=[];
+var materialsList = [];
 
-// Show materials for items with more than 8 materials
-var material = items.map(function(item){
-  if (item.materials.length >= 8){
-       return materialsList.push(item);
+// Find items with more than eight materials
+
+var findEight = items.filter(function(z){
+  var mats = z.materials;
+  if (mats.length >= 8) {
+    return materialsList.push(z);
   };
+  return materialsList;
 });
-// console.log(listofMaterials);
 
-// Get information on page
-var answer5 = document.querySelector('#answer5');
 
-materialsList.map(function(item){
- var matList = item.materials.length;
- var text = " has " + matList + " materials:"
- var breakLine = document.createElement('br');
- var title = document.createTextNode(item.title);
- var textTitle = document.createTextNode(text);
- var newLine = document.createElement('br');
- var newLine2 = document.createElement('br');
- answer5.appendChild(breakLine);
- answer5.appendChild(title);
- answer5.appendChild(textTitle);
- answer5.appendChild(newLine);
-
-item.materials.map(function(x){
- var all = document.createTextNode(x);
- // var newLine =document.createElement('br');
- answer5.appendChild(all);
- // answer5.appendChild(newLine);
- 
- });
+// Get name and number of materials on page
+materialsList.forEach(function(nameNumber){
+  var answer5 = document.querySelector('#answer5');
+  var textNode = document.createTextNode(nameNumber.title + ' has ' + nameNumber.materials.length + ' materials:');
+  var linebreak = document.createElement('br');
+  answer5.appendChild(textNode);
+  answer5.appendChild(linebreak);
+  
+// Get list of materials on page
+  nameNumber.materials.forEach(function(madeOf){
+  var answer5a = document.querySelector('#answer5');
+  var textNode = document.createTextNode(madeOf);
+  var linebreak2 = document.createElement('br');
+  answer5.appendChild(textNode);
+  answer5.appendChild(linebreak2);
+  });
 });
 
 

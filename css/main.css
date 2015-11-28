@@ -1,51 +1,65 @@
+$whiteColor: #FFFFFF;
+$grayDarkColor: #4A4B4F;
+$grayLightColor: #8D8D8D;
+
+
 body {
   background-color: #FFFFFF;
   color: #8D8D8D;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+}
 
 header {
-  font-size: xx-large; }
+  font-size: xx-large;
+  margin-top: 25px;
+  margin-left: 40px;
+  margin-bottom: 25px;
+  font-family: sans-serif;
+}
 
 .banner {
-  background-image: url(images/banner.jpg);
+  background-image: url('../images/banner.jpg');
   background-size: cover;
-  max-width: 100%;
-  height: auto;
-  width: auto; }
+  height: 150px;
+}
 
 ul {
   list-style-type: none;
-  text-align: center; }
+  text-align: center;
+  font-family: sans-serif;
+}
 
 li {
   max-width: 100%;
-  height: 160px;
+  height: auto;
   width: auto;
   text-align: center;
-  padding-top: -100px;
-  line-height: 70px; }
-
-1 {
-  overflow: hidden;
-  text-align: center; }
+/*  padding-top: -100px;*/
+  line-height: 16px;
+}
 
 h1:before,
 h1:after {
-  background-color: #8D8D8D;
-  content: "";
-  display: inline-block;
-  height: 1px;
-  position: relative;
-  vertical-align: middle;
-  width: 40%; }
-
+    background-color: #8D8D8D;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 40%;
+}
 h1:before {
-  right: 0.5em;
-  margin-left: -50%; }
-
+    right: 0.5em;
+    margin-left: -50%;
+}
 h1:after {
-  left: 0.5em;
-  margin-right: -50%; }
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+p {
+  text-align: left;
+}
 
 footer {
   position: absolute;
@@ -55,4 +69,6 @@ footer {
   color: #8D8D8D;
   font-size: 12px;
   text-align: center;
-  padding-top: 110px; }
+  padding-top: 110px;
+  font-family: sans-serif;
+}

@@ -1,61 +1,43 @@
-// Color Palette
 $whiteColor: #FFFFFF;
 $grayDarkColor: #4A4B4F;
 $grayLightColor: #8D8D8D;
 
-// Font
-//$font-family: sans-serif;
-
 
 body {
-  background-color: $whiteColor;
-  color: $grayLightColor;
-  font-family: sans-serif
-}
-
-.container {
-
+  background-color: #FFFFFF;
+  color: #8D8D8D;
+  font-family: sans-serif;
 }
 
 header {
   font-size: xx-large;
+  margin-top: 25px;
+  margin-left: 40px;
+  margin-bottom: 25px;
+  font-family: sans-serif;
 }
 
 .banner {
-  background-image: url(images/banner.jpg);
+  background-image: url('../images/banner.jpg');
   background-size: cover;
-  //text-align: center;
-  //vertical-align: middle;
-  //padding-top: 130px;
-  //padding-bottom: 175px;
-    max-width: 100%;
-    height: auto;
-    width: auto;
-  // <img src="images/banner.jpg" alt="bridge" width=100%>
+  height: 150px;
 }
 
 ul {
   list-style-type: none;
   text-align: center;
+  font-family: sans-serif;
 }
 
 li {
   max-width: 100%;
-  height: 250px;
+  height: auto;
   width: auto;
   text-align: center;
-  padding-top: -100px;
-  line-height: 70px;
+/*  padding-top: -100px;*/
+  line-height: 16px;
 }
 
-//h1 {
- // font-family: Georgia, serif;
-//}
-
-1 {
-    overflow: hidden;
-    text-align: center;
-}
 h1:before,
 h1:after {
     background-color: #8D8D8D;
@@ -75,13 +57,18 @@ h1:after {
     margin-right: -50%;
 }
 
+p {
+  text-align: left;
+}
+
 footer {
   position: absolute;
   width: 100%;
   height: 50px;
-  background-color: $grayDarkColor;
-  color: $grayLightColor;
+  background-color: #4A4B4F;
+  color: #8D8D8D;
   font-size: 12px;
   text-align: center;
   padding-top: 110px;
+  font-family: sans-serif;
 }
